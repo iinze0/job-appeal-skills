@@ -1,17 +1,19 @@
 # Job Appeal Skills
 
-A collection of agent skills for **rigorous review**, **architecture thinking**, and **security analysis**.
+A collection of high-quality agent skills for **rigorous review**, **architecture thinking**, and **security analysis**.
 
 Compatible with Claude Code, Cursor, Codex, and other agents that support the open [Agent Skills](https://agentskills.io) standard (SKILL.md).
+
+Each skill is designed to produce high-signal, actionable output with clear severity, impact, and concrete recommendations.
 
 ## Skills
 
 | Skill | Focus |
 |-------|--------|
-| [rigorous-code-review](./skills/rigorous-code-review/SKILL.md) | Perform a rigorous, structured code review focused on correctness, architecture, security, maintainability, and edge cases |
-| [architecture-review](./skills/architecture-review/SKILL.md) | Review software architecture or significant design changes for structural quality, trade-offs, scalability, and long-term risk |
+| [rigorous-code-review](./skills/rigorous-code-review/SKILL.md) | Perform a rigorous, structured code review focused on correctness, security, architecture, edge cases, and maintainability |
+| [architecture-review](./skills/architecture-review/SKILL.md) | Review software architecture or significant design changes for structural quality, trade-offs, scalability, failure modes, and long-term risk |
 | [security-thinking](./skills/security-thinking/SKILL.md) | Apply rigorous security thinking |
-| [test-review](./skills/test-review/SKILL.md) | Review tests for coverage quality, edge cases, flakiness risk, and whether they actually protect the intended behavior |
+| [test-review](./skills/test-review/SKILL.md) | Review tests for real coverage of critical paths, edge cases, and failure modes |
 | [api-design-review](./skills/api-design-review/SKILL.md) | Review API design for consistency, usability, error handling, versioning, and long-term maintainability |
 | [performance-review](./skills/performance-review/SKILL.md) | Review code or designs for performance issues, inefficient algorithms, unnecessary work, and scalability bottlenecks |
 | [error-handling-review](./skills/error-handling-review/SKILL.md) | Review error handling for completeness, clarity, recovery strategies, and whether failures are handled safely |
@@ -28,6 +30,10 @@ Compatible with Claude Code, Cursor, Codex, and other agents that support the op
 | [ci-review](./skills/ci-review/SKILL.md) | Review CI/CD pipelines for reliability, security, speed, and correctness |
 | [documentation-review](./skills/documentation-review/SKILL.md) | Review documentation, comments, and READMEs for accuracy, completeness, and usefulness |
 | [release-readiness](./skills/release-readiness/SKILL.md) | Assess whether a change or feature is ready to ship |
+| [architecture](./skills/architecture/SKILL.md) | Review software architecture or significant design changes for structural quality, trade-offs, scalability, failure modes, and long-term risk |
+| [grill](./skills/grill/SKILL.md) | Aggressive, high-signal code review that prioritizes correctness, security, and long-term quality |
+| [security-lens](./skills/security-lens/SKILL.md) | Apply rigorous security thinking |
+| [ship](./skills/ship/SKILL.md) | Final check before shipping |
 
 ## Installation
 
@@ -47,6 +53,7 @@ npx skills add iinze0/job-appeal-skills --skill rigorous-code-review
 - Explain impact, not just problems
 - Focus on correctness, architecture, security, and long-term quality
 - Practical and proportional recommendations
+- Clear output formats so results are easy to act on
 
 ## License
 

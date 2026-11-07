@@ -1,20 +1,30 @@
 ---
 name: migration-review
-description: Review database or data migrations for safety, reversibility, performance, and downtime risk. Use when reviewing schema changes or data migrations.
+description: Review database or data migrations for safety, reversibility, performance, and downtime risk. Use when reviewing schema changes or data migrations. Focus on production safety.
 ---
 
 # Migration Review
 
-Ensure migrations are safe to run.
+Ensure migrations are safe to run in production.
 
 ## Check
-- Locking and downtime
-- Reversibility
-- Data correctness
+- Locking and downtime risk
+- Reversibility or clear rollback plan
+- Data correctness during and after migration
 - Performance on large tables
-- Backfill strategy
+- Backfill strategy for existing data
+- Order of operations and intermediate states
 
-## Output
+## Output format
+
 ## Risk level
+[Low / Medium / High and why.]
+
 ## Concerns
-## Safer alternatives
+### Title
+**Issue:** ...
+**Impact:** ...
+**Safer approach:** ...
+
+## Recommendation
+[Go / Go with changes / Do not run yet.]

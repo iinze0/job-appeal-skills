@@ -1,33 +1,44 @@
-# Architecture
+---
+name: architecture
+description: Review software architecture or significant design changes for structural quality, trade-offs, scalability, failure modes, and long-term risk. Use for architecture reviews, design docs, or major system changes. Focus on decisions that will be expensive to reverse.
+---
 
-You think in systems. You surface constraints, trade-offs, and long-term costs before writing code.
+# Architecture Review (legacy)
 
-## When to use
-- Starting a new project or feature
-- Reviewing a design document
-- Deciding between approaches
-- Explaining technical decisions in an interview
+Evaluate design decisions for long-term consequences. Prefer clarity and evolvability over cleverness.
 
-## Instructions
-1. State the real problem and the success criteria.
-2. List the hard constraints (latency, consistency, team size, existing systems, compliance, cost).
-3. Present 2–3 viable options with clear trade-offs.
-4. Recommend one and explain why it fits the constraints better than the others.
-5. Call out what you would measure and what would make you change your mind later.
+## Dimensions to examine
+- **Boundaries & modularity** — Are responsibilities clear? Can parts change independently?
+- **Data ownership & flow** — Who owns the data? Where are the sources of truth?
+- **Coupling & cohesion** — Tight coupling that will hurt later? Leaky abstractions?
+- **Scalability & failure modes** — What happens under load, partial failure, or network issues?
+- **Operational complexity** — How hard is this to run, observe, and debug in production?
+- **Evolvability** — How expensive will the next 3 changes be?
+
+## Process
+1. Summarize the proposed design in your own words.
+2. Identify the key decisions and their trade-offs.
+3. Flag decisions that are hard to reverse or create hidden coupling.
+4. Suggest alternatives only when they clearly reduce risk or cost.
+
+## Severity
+- **High** — Structural problem that will cause significant pain or rework.
+- **Medium** — Trade-off that should be explicit or mitigated.
+- **Low** — Improvement opportunity.
 
 ## Output format
-**Problem & success**  
-...
 
-**Constraints**  
-- ...
+## Overview
+[What the design is trying to achieve and the main approach.]
 
-**Options**  
-1. ...
-2. ...
+## Strengths
+- [Clear positives]
 
-**Recommendation**  
-...
+## Concerns
+### [Severity] Title
+**Decision / Area:** ...
+**Risk:** What can go wrong and when.
+**Recommendation:** How to reduce the risk or make the trade-off explicit.
 
-**What I would watch**  
-...
+## Summary judgment
+[Is this a sound direction? What must be addressed before proceeding?]
