@@ -1,18 +1,26 @@
 ---
 name: naming-and-clarity
-description: Review naming, structure, and clarity of code. Focus on whether the code communicates intent well. Use for readability-focused reviews.
+description: Review naming, structure, and clarity of code. Focus on whether the code communicates intent well to the next reader. Use for readability-focused reviews. Prefer clarity over cleverness.
 ---
 
 # Naming and Clarity Review
 
-Make code easier to understand.
+Make code easier to understand and change.
 
 ## Look for
-- Misleading names
-- Overly long functions
-- Hidden intent
+- Misleading or vague names
+- Overly long functions or deep nesting that hide intent
 - Inconsistent terminology
+- Hidden side effects
+- Comments that should be better names instead
 
-## Output
+## Output format
+
 ## Clarity issues
-## Suggested renames or restructures
+### Title
+**Location:** ...
+**Problem:** ...
+**Suggested improvement:** ...
+
+## Summary
+[Overall readability assessment.]
